@@ -7,8 +7,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(strlen($_POST["task-deadline"]) > 0){
       $_SESSION["TASK"][] = $_POST["task-name"]." - ".$_POST["task-deadline"];
     }
-    else{
+    elseif(strlen($_POST["task-name"]) > 0){
       $_SESSION["TASK"][] = $_POST["task-name"];
+    }
+    else{
+      echo "Please input the task and deadline!";
     }
   }
   elseif(isset($_POST["completed-index"])){
