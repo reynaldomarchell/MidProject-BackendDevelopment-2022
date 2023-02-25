@@ -8,12 +8,14 @@ session_start();
 
     $user_name = $_SESSION["user_name"];
 
-    foreach($_SESSION["TASK"] as $task){
-      mysqli_query($con, "INSERT INTO tasks (user_name,task) VALUES ('$user_name','$task')");
+    $ut = $_SESSION["TASK"];
+    $ct = $_SESSION["COMPLETED_TASK"];
+
+    foreach($_SESSION["TASK"] as $val){
+      mysqli_query($con, "INSERT INTO tasks (user_name, task) VALUES ('$user_name','$val')");
     }
-    
-    foreach($_SESSION["COMPLETED_TASK"] as $task){
-      mysqli_query($con, "INSERT INTO completed (user_name,task) VALUES ('$user_name','$task')");
+    foreach($_SESSION["COMPLETED_TASK"] as $val){
+      mysqli_query($con, "INSERT INTO completed (user_name, task) VALUES ('$user_name','$val')");
     }
 
   }

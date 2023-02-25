@@ -36,7 +36,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }
   elseif(isset($_POST["deleted-index"])){
     $task = $_SESSION["TASK"][$_POST["deleted-index"]];
+    var_dump($_SESSION["TASK"]);
+    var_dump($task);
     for($i = 0; $i < $task; $i++){
+      unset($_SESSION["TASK"][null]);
       if($_SESSION["TASK"][$i] == $task){
         unset($_SESSION["TASK"][$i]);
         break;
