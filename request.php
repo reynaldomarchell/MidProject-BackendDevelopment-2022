@@ -10,40 +10,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     elseif(strlen($_POST["task-name"]) > 0){
       $_SESSION["TASK"][] = $_POST["task-name"];
     }
-    else{
-      echo "Please input the task and deadline!";
-    }
   }
   elseif(isset($_POST["completed-index"])){
     $task = $_SESSION["TASK"][$_POST["completed-index"]];
     $_SESSION["COMPLETED_TASK"][] = $task;
-    for($i = 0; $i < $task; $i++){
+    $i = 0;
+    while(true){
       if($_SESSION["TASK"][$i] == $task){
         unset($_SESSION["TASK"][$i]);
         break;
       }
+      $i++;
     }
   }
   elseif(isset($_POST["restored-index"])){
     $task = $_SESSION["COMPLETED_TASK"][$_POST["restored-index"]];
-    for($i = 0; $i < $task; $i++){
+    $i = 0;
+    while(true){
       if($_SESSION["COMPLETED_TASK"][$i] == $task){
         $_SESSION["TASK"][] = $task;
         unset($_SESSION["COMPLETED_TASK"][$i]);
         break;
       }
+      $i++;
     }
   }
   elseif(isset($_POST["deleted-index"])){
     $task = $_SESSION["TASK"][$_POST["deleted-index"]];
-    var_dump($_SESSION["TASK"]);
-    var_dump($task);
-    for($i = 0; $i < $task; $i++){
-      unset($_SESSION["TASK"][null]);
+    $i = 0;
+    while(true){
       if($_SESSION["TASK"][$i] == $task){
         unset($_SESSION["TASK"][$i]);
         break;
       }
+      $i++;
     }
   }
 }
