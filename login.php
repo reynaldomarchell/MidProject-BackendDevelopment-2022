@@ -25,13 +25,13 @@ session_start();
             while($row = mysqli_fetch_assoc($tasks_result)){
               $_SESSION["TASK"][] = $row["task"];
             }
-            // mysqli_query($con, "DELETE FROM tasks WHERE user_name = '$user_name'");
+            mysqli_query($con, "DELETE FROM tasks WHERE user_name = '$user_name'");
 
             $completed_result = mysqli_query($con, "SELECT task FROM completed WHERE user_name = '$user_name'");
             while($row = mysqli_fetch_assoc($completed_result)){
               $_SESSION["COMPLETED_TASK"][] = $row["task"];
             }
-            // mysqli_query($con, "DELETE FROM completed WHERE user_name = '$user_name'");
+            mysqli_query($con, "DELETE FROM completed WHERE user_name = '$user_name'");
             
             header("Location: index.php");
             die;

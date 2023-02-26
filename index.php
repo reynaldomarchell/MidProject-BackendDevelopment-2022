@@ -28,7 +28,7 @@ session_start();
     $display_name = $user_data['name'];
     echo "<h1 style=\"display: inline-block\">$display_name</h1>";
   ?>
-  <a href="login.php">
+  <a href="logout.php">
     <button>Logout</button>
   </a>
   
