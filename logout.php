@@ -22,7 +22,6 @@ session_start();
       }
     }
 
-    // session_destroy();
     unset($_SESSION["name"]);
     unset($_SESSION["TASK"]);
     unset($_SESSION["COMPLETED_TASK"]);
