@@ -3,4 +3,4 @@ To do list web page using PHP and MySQL as a database for storing user account a
 
 Team:
 * Reynaldo Marchell Bagas Adji - 2602138214
-* Reynaldy Marchell Bagas Adji
+* Reynaldy Marchell Bagas Adji - 2602141846
