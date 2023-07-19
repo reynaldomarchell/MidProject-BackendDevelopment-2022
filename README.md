@@ -19,7 +19,7 @@ Members:
 2. Open terminal and go to htdocs on your XAMPP directory
 
 ```bash
-    cd C:\xampp\htdocs
+    cd C:/xampp/htdocs
 ```
 
 3. Clone this repository
@@ -29,10 +29,10 @@ Members:
     cd todo
 ```
 
-4. Copy the SQL query inside dbcode.sql after running this command
+4. Copy the SQL query inside dbcode.sql and paste it in SQL server or just run this command
 
 ```bash
-    cat database.sql
+    cat dbcode.sql
 ```
 
 5. Go to this link (http://localhost/todo) to access the page.
