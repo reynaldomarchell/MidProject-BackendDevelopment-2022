@@ -50,25 +50,26 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 </head>
 
 <body>
-  <div class="signup template d-flex justify-content-center align-items-center vh-100 bg-primary">
+  <div class="signup template d-flex justify-content-center align-items-center vh-100 bg-dark bg-gradient">
     <div class="form_container p-5 rounded bg-white">
       <form method="POST">
         <h3 class="text-center">Sign Up</h3>
-        <div class="mb-2">
+        <div class="mb-2 mt-4">
           <label htmlFor="name">Enter your name (1-20 character)</label>
-          <input type="text" placeholder="Name" class="form-control" name="name">
+          <input type="text" placeholder="Name" class="form-control mt-2" name="name" required>
         </div>
         <div class="mb-2">
           <label htmlFor="username">Enter your username (3-15 character)</label>
-          <input type="text" placeholder="Username" class="form-control" name="user_name">
+          <input type="text" placeholder="Username" class="form-control mt-2" name="user_name" required>
         </div>
         <div class="mb-2">
           <label htmlFor="password">Enter your password (8-20 character)</label>
-          <input type="password" placeholder="Password" class="form-control" name="password">
+          <input type="password" placeholder="Password" class="form-control mt-2" name="password" required>
         </div>
-        <div class="mb-2">
+        <div class="mb-2 mb-4">
           <label htmlFor="confirm_password">Confirmation password (same as password)</label>
-          <input type="password" placeholder="Confirmation Password" class="form-control" name="confirm_password">
+          <input type="password" placeholder="Confirmation Password" class="form-control mt-2" name="confirm_password"
+            required>
         </div>
         <div class="d-grid mt-2">
           <button class="btn btn-primary">Sign Up</button>

@@ -60,17 +60,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 </head>
 
 <body>
-  <div class="login template d-flex justify-content-center align-items-center vh-100 bg-primary">
+  <div class="login template d-flex justify-content-center align-items-center vh-100 bg-dark bg-gradient">
     <div class="form_container p-5 rounded bg-white">
       <form method="POST">
         <h3 class="text-center">Sign In</h3>
-        <div class="mb-2">
+        <div class="mb-2 mt-4">
           <label htmlFor="username">Enter your username</label>
-          <input type="text" placeholder="Username" class="form-control" name="user_name">
+          <input type="text" placeholder="Username" class="form-control mt-2" name="user_name" required>
         </div>
-        <div class="mb-2">
+        <div class="mb-4">
           <label htmlFor="password">Enter your password</label>
-          <input type="password" placeholder="Password" class="form-control" name="password">
+          <input type="password" placeholder="Password" class="form-control mt-2" name="password" required>
         </div>
         <!-- <div class="mb-2">
           <input type="checkbox" class="custom-control custom-checkbox" id="check">
